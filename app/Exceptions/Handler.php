@@ -44,7 +44,27 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        // Not found exception handler
+        if($e instanceof NotFoundHttpException) {
+            return response()->json([
+                'error' => [
+                    'description' => 'Invalid URI',
+                    'messages' => []
+                ]
+            ], 404);
+        }
+
+        // Method not allowed exception handler
+        if($e instanceof MethodNotAllowedHttpException) {
+            return response()->json([
+                'error' => [
+                    'description' => 'Method Not Allowed',
+                    'messages' => []
+                ]
+            ], 405);
+        }
+
+        return parent::render($request, $e);
     }
 
     /**

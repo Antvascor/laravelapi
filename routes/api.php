@@ -31,3 +31,5 @@ Route::group(array('prefix' => 'api'), function()
 Route::get('/', function () {
     return redirect('api');
 });
+
+Route::post('auth/login', 'AuthController@authenticate');
