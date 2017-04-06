@@ -13,4 +13,3 @@ Roadmap do que irei abordar nesta série:</br>
   - Middlewares</br>
   - Autenticação e Sessão</br>
   - Validações e tratamento de erros</br>
-  - Controle de cache com Redis</br>
