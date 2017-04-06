@@ -11,6 +11,7 @@ bootstrap/cache/
 .env.php
 .env
 .env.example
+.htaccess
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
